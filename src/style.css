@@ -208,5 +208,25 @@ body {
     font-weight: 600;
   }
 
+  /* Tarjeta de resultados */
+  .result-card {
+    margin-top: 30*x;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+  }
+
+  /* Estado aprobado */
+  .approved {
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  /* Estado reprobado */
+  .failed {
+    color: #dc2626;
+    font-weight: 700;
+  }
 
 }

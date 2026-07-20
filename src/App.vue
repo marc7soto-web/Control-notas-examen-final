@@ -103,9 +103,27 @@
             </small>
           </div>
 
-          <button type="button" class="calculate-button">
+          <button type="button" class="calculate-button" @click="calcularPromedio">
             Calcular
           </button>
+
+          <div v-if="promedioFinal" class="result-card">
+
+            <h3>
+              Resultado Final
+            </h3>
+
+            <p>
+              Promedio: {{ promedioFinal }}
+            </p>
+
+            <p :class="resultado === 'APROBADO'
+              ? 'approved'
+              : 'failed'">
+              {{ resultado }}
+            </p>
+
+          </div>
 
         </form>
 
@@ -138,7 +156,26 @@ const nota2 = ref('')
 const nota3 = ref('')
 const asistencia = ref('')
 
-// En construcción.
-// Pendiente implementar cálculo de promedio.
+// Resultado final del cálculo.
+const promedioFinal = ref(null)
+const resultado = ref('')
+
+// Calcula el promedio ponderado.
+const calcularPromedio = () => {
+
+  const promedio =
+    (Number(nota1.value) * 0.35) +
+    (Number(nota2.value) * 0.35) +
+    (Number(nota3.value) * 0.30)
+
+  promedioFinal.value = promedio.toFixed(2)
+
+  if (promedio >= 40 && Number(asistencia.value) >= 80) {
+    resultado.value = 'APROBADO'
+  } else {
+    resultado.value = 'REPROBADO'
+  }
+
+}
 
 </script>
