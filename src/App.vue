@@ -57,8 +57,11 @@
               Nota 1
             </label>
 
-            <input id="nota1" type="number" placeholder="Ingrese Nota 1">
+            <input id="nota1" type="number" v-model="nota1" placeholder="Ingrese Nota 1">
 
+            <small v-if="nota1 && (nota1 < 10 || nota1 > 70)" class="error-message">
+              Debe ingresar una nota entre 10 y 70.
+            </small>
           </div>
 
           <div class="form-group">
@@ -67,8 +70,11 @@
               Nota 2
             </label>
 
-            <input id="nota2" type="number" placeholder="Ingrese Nota 2">
+            <input id="nota2" type="number" v-model="nota2" placeholder="Ingrese Nota 2">
 
+            <small v-if="nota2 && (nota2 < 10 || nota2 > 70)" class="error-message">
+              Debe ingresar una nota entre 10 y 70.
+            </small>
           </div>
 
           <div class="form-group">
@@ -77,8 +83,11 @@
               Nota 3
             </label>
 
-            <input id="nota3" type="number" placeholder="Ingrese Nota 3">
+            <input id="nota3" type="number" v-model="nota3" placeholder="Ingrese Nota 3">
 
+            <small v-if="nota3 && (nota3 < 10 || nota3 > 70)" class="error-message">
+              Debe ingresar una nota entre 10 y 70.
+            </small>
           </div>
 
           <div class="form-group">
@@ -87,8 +96,11 @@
               Asistencia (%)
             </label>
 
-            <input id="asistencia" type="number" placeholder="Ingrese asistencia">
+            <input id="asistencia" type="number" v-model="asistencia" placeholder="Ingrese asistencia">
 
+            <small v-if="asistencia && (asistencia < 0 || asistencia > 100)" class="error-message">
+              La asistencia debe estar entre 0 y 100.
+            </small>
           </div>
 
           <button type="button" class="calculate-button">
@@ -114,8 +126,19 @@
 </template>
 
 <script setup>
+
 import { ref } from 'vue'
 
-// Controla la pestaña actualmente seleccionada.
+// Controla la pestaña seleccionada.
 const activeTab = ref('calificaciones')
+
+// Datos del formulario.
+const nota1 = ref('')
+const nota2 = ref('')
+const nota3 = ref('')
+const asistencia = ref('')
+
+// En construcción.
+// Pendiente implementar cálculo de promedio.
+
 </script>

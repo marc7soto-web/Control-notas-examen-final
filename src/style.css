@@ -200,5 +200,13 @@ body {
     background-color: #1d4ed8;
   }
 
+  /* Mensajes de validación */
+  .error-message {
+    margin-top: 6px;
+    color: #dc2626;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
 
 }
