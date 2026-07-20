@@ -229,4 +229,25 @@ body {
     font-weight: 700;
   }
 
+  /* Formulario de registro */
+  .register-form {
+    max-width: 500px;
+  }
+
+  /* Botón enviar */
+  .register-button {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    background-color: #16a34a;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .register-button:hover {
+    background-color: #15803d;
+  }
+
 }

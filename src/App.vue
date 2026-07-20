@@ -130,11 +130,57 @@
       </section>
       <section v-if="activeTab === 'registro'">
 
-        <h2>Formulario de Registro</h2>
+        <h2 class="section-title">
+          Formulario de Registro
+        </h2>
 
-        <p>
-          Formulario en construcción.
-        </p>
+        <form class="register-form">
+
+          <div class="form-group">
+
+            <label for="nombre">
+              Nombre
+            </label>
+
+            <input id="nombre" type="text" v-model="nombre" placeholder="Ingrese nombre">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="correo">
+              Correo
+            </label>
+
+            <input id="correo" type="email" v-model="correo" placeholder="Ingrese correo electrónico">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="password">
+              Contraseña
+            </label>
+
+            <input id="password" type="password" v-model="password" placeholder="Ingrese contraseña">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="repetirPassword">
+              Repetir Contraseña
+            </label>
+
+            <input id="repetirPassword" type="password" v-model="repetirPassword" placeholder="Repita la contraseña">
+
+          </div>
+
+          <button type="button" class="register-button">
+            Enviar
+          </button>
+
+        </form>
 
       </section>
 
@@ -175,6 +221,12 @@ const calcularPromedio = () => {
   } else {
     resultado.value = 'REPROBADO'
   }
+
+  // Datos del formulario de registro.
+  const nombre = ref('')
+  const correo = ref('')
+  const password = ref('')
+  const repetirPassword = ref('')
 
 }
 
