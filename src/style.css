@@ -1,128 +1,149 @@
 html,
 body,
 #app {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7fb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fb;
 }
 
 .app {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 /* Barra principal */
 .navbar {
-    background-color: #ffffff;
-    padding: 24px 40px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  padding: 24px 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Título de la asignatura */
 .title {
-    margin: 0 0 24px 0;
-    font-size: 2rem;
-    color: #1e3a8a;
+  margin: 0 0 24px 0;
+  font-size: 2rem;
+  color: #1e3a8a;
 }
 
 /* Contenedor principal */
 .navigation-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
 
 /* Pestañas */
 .tabs {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 /* Botones de navegación */
 .tab-button {
-    border: none;
-    border-radius: 10px;
-    padding: 12px 18px;
-    background-color: #e0e7ff;
-    color: #1e3a8a;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .tab-button:hover {
-    background-color: #c7d2fe;
+  background-color: #c7d2fe;
 }
 
 /* Área de búsqueda */
 .search-area {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 /* Campo de búsqueda */
 .search-input {
-    width: 280px;
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
+  width: 280px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
 }
 
 /* Texto de ayuda */
 .search-input::placeholder {
-    color: #94a3b8;
+  color: #94a3b8;
 }
 
 /* Botón búsqueda */
 .search-button {
-    border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
-    background-color: #2563eb;
-    color: #ffffff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .search-button:hover {
-    background-color: #1d4ed8;
+  background-color: #1d4ed8;
+}
+
+/* Línea divisoria */
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #dbeafe;
+  margin-bottom: 24px;
+}
+
+/* Pestaña activa */
+.tab-button.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Área de contenido */
+.content {
+  margin: 40px 50px;
+}
+
+/* Tarjeta de contenido */
+.content section {
+  background-color: #ffffff;
+  padding: 30px;
+  padding-left: 70px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Diseño responsive */
 @media (max-width: 768px) {
 
-    .navbar {
-        padding: 20px;
-    }
+  .navbar {
+    padding: 20px;
+  }
 
-    .navigation-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .navigation-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .tabs {
-        flex-direction: column;
-    }
+  .tabs {
+    flex-direction: column;
+  }
 
-    .search-area {
-        flex-direction: column;
-    }
+  .search-area {
+    flex-direction: column;
+  }
 
-    .search-input {
-        width: 100%;
-    }
-
-    .divider {
-    border: none;
-    height: 2px;
-    background-color: #dbeafe;
-    margin-bottom: 24px;
-    }
+  .search-input {
+    width: 100%;
+  }
 
 }
