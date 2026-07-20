@@ -146,4 +146,59 @@ body {
     width: 100%;
   }
 
+  /* Título de sección */
+  .section-title {
+    color: #1e3a8a;
+    margin-bottom: 30px;
+  }
+
+  /* Formulario de calificaciones */
+  .grades-form {
+    max-width: 500px;
+  }
+
+  /* Grupo de campos */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  /* Etiquetas */
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  /* Campos */
+  .form-group input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  /* Foco del campo */
+  .form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+  }
+
+  /* Botón calcular */
+  .calculate-button {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .calculate-button:hover {
+    background-color: #1d4ed8;
+  }
+
+
 }

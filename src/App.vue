@@ -45,14 +45,59 @@
 
       <section v-if="activeTab === 'calificaciones'">
 
-        <h2>Cálculo de calificaciones</h2>
+        <h2 class="section-title">
+          Cálculo de calificaciones
+        </h2>
 
-        <p>
-          Formulario en construcción.
-        </p>
+        <form class="grades-form">
+
+          <div class="form-group">
+
+            <label for="nota1">
+              Nota 1
+            </label>
+
+            <input id="nota1" type="number" placeholder="Ingrese Nota 1">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="nota2">
+              Nota 2
+            </label>
+
+            <input id="nota2" type="number" placeholder="Ingrese Nota 2">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="nota3">
+              Nota 3
+            </label>
+
+            <input id="nota3" type="number" placeholder="Ingrese Nota 3">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="asistencia">
+              Asistencia (%)
+            </label>
+
+            <input id="asistencia" type="number" placeholder="Ingrese asistencia">
+
+          </div>
+
+          <button type="button" class="calculate-button">
+            Calcular
+          </button>
+
+        </form>
 
       </section>
-
       <section v-if="activeTab === 'registro'">
 
         <h2>Formulario de Registro</h2>
