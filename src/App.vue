@@ -144,6 +144,10 @@
 
             <input id="nombre" type="text" v-model="nombre" placeholder="Ingrese nombre">
 
+            <small v-if="nombre === ''" class="error-message">
+              Ingrese un nombre.
+            </small>
+
           </div>
 
           <div class="form-group">
@@ -154,6 +158,10 @@
 
             <input id="correo" type="email" v-model="correo" placeholder="Ingrese correo electrónico">
 
+            <small v-if="correo && !correoValido(correo)" class="error-message">
+              Ingrese un correo válido.
+
+            </small>
           </div>
 
           <div class="form-group">
@@ -163,6 +171,10 @@
             </label>
 
             <input id="password" type="password" v-model="password" placeholder="Ingrese contraseña">
+
+            <small v-if="password === ''" class="error-message">
+              La contraseña es obligatoria.
+            </small>
 
           </div>
 
@@ -174,9 +186,15 @@
 
             <input id="repetirPassword" type="password" v-model="repetirPassword" placeholder="Repita la contraseña">
 
+            <small v-if="
+              repetirPassword &&
+              password !== repetirPassword
+            " class="error-message">
+              Las contraseñas no coinciden.
+            </small>
           </div>
 
-          <button type="button" class="register-button">
+          <button type="button" class="register-button" @click="registrarUsuario">
             Enviar
           </button>
 
@@ -206,6 +224,17 @@ const asistencia = ref('')
 const promedioFinal = ref(null)
 const resultado = ref('')
 
+// Datos del formulario de registro.
+const nombre = ref('')
+const correo = ref('')
+const password = ref('')
+const repetirPassword = ref('')
+
+// Valida que el correo electrónico tenga un formato válido.
+const correoValido = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
 // Calcula el promedio ponderado.
 const calcularPromedio = () => {
 
@@ -222,11 +251,29 @@ const calcularPromedio = () => {
     resultado.value = 'REPROBADO'
   }
 
-  // Datos del formulario de registro.
-  const nombre = ref('')
-  const correo = ref('')
-  const password = ref('')
-  const repetirPassword = ref('')
+}
+
+// Valida el formulario de registro.
+const registrarUsuario = () => {
+
+  if (
+    !nombre.value ||
+    !correo.value ||
+    !password.value ||
+    !repetirPassword.value
+  ) {
+    return
+  }
+
+  if (!correoValido(correo.value)) {
+    return
+  }
+
+  if (password.value !== repetirPassword.value) {
+    return
+  }
+
+  alert("El registro se ha realizado correctamente")
 
 }
 
