@@ -238,6 +238,24 @@ const correoValido = (email) => {
 // Calcula el promedio ponderado.
 const calcularPromedio = () => {
 
+  if (
+    !nota1.value ||
+    !nota2.value ||
+    !nota3.value ||
+    !asistencia.value
+  ) {
+    return
+  }
+
+  if (
+    nota1.value < 10 || nota1.value > 70 ||
+    nota2.value < 10 || nota2.value > 70 ||
+    nota3.value < 10 || nota3.value > 70 ||
+    asistencia.value < 0 || asistencia.value > 100
+  ) {
+    return
+  }
+
   const promedio =
     (Number(nota1.value) * 0.35) +
     (Number(nota2.value) * 0.35) +

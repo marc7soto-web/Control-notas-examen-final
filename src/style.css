@@ -9,6 +9,7 @@ body,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f7fb;
+  overflow-x: hidden;
 }
 
 .app {
@@ -27,6 +28,14 @@ body {
   margin: 0 0 24px 0;
   font-size: 2rem;
   color: #1e3a8a;
+}
+
+/* Línea divisoria */
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #dbeafe;
+  margin-bottom: 24px;
 }
 
 /* Contenedor principal */
@@ -57,6 +66,12 @@ body {
 
 .tab-button:hover {
   background-color: #c7d2fe;
+}
+
+/* Pestaña activa */
+.tab-button.active {
+  background-color: #2563eb;
+  color: #ffffff;
 }
 
 /* Área de búsqueda */
@@ -94,20 +109,6 @@ body {
   background-color: #1d4ed8;
 }
 
-/* Línea divisoria */
-.divider {
-  border: none;
-  height: 2px;
-  background-color: #dbeafe;
-  margin-bottom: 24px;
-}
-
-/* Pestaña activa */
-.tab-button.active {
-  background-color: #2563eb;
-  color: #ffffff;
-}
-
 /* Área de contenido */
 .content {
   margin: 40px 50px;
@@ -116,10 +117,115 @@ body {
 /* Tarjeta de contenido */
 .content section {
   background-color: #ffffff;
-  padding: 30px;
-  padding-left: 70px;
+  padding: 40px 70px;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Título de sección */
+.section-title {
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+/* Formulario de calificaciones */
+.grades-form {
+  max-width: 650px;
+}
+
+/* Formulario de registro */
+.register-form {
+  max-width: 650px;
+}
+
+/* Grupo de campos */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Campos */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* Foco del campo */
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Botón calcular */
+.calculate-button {
+  border: none;
+  border-radius: 10px;
+  padding: 14px 25px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calculate-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Botón enviar */
+.register-button {
+  border: none;
+  border-radius: 10px;
+  padding: 14px 25px;
+  background-color: #16a34a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-button:hover {
+  background-color: #15803d;
+}
+
+/* Mensajes de validación */
+.error-message {
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Tarjeta de resultados */
+.result-card {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  border-left: 6px solid #2563eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Estado aprobado */
+.approved {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* Estado reprobado */
+.failed {
+  color: #dc2626;
+  font-weight: 700;
 }
 
 /* Diseño responsive */
@@ -146,108 +252,12 @@ body {
     width: 100%;
   }
 
-  /* Título de sección */
-  .section-title {
-    color: #1e3a8a;
-    margin-bottom: 30px;
+  .content {
+    margin: 20px;
   }
 
-  /* Formulario de calificaciones */
-  .grades-form {
-    max-width: 500px;
-  }
-
-  /* Grupo de campos */
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  /* Etiquetas */
-  .form-group label {
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-
-  /* Campos */
-  .form-group input {
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    font-size: 1rem;
-  }
-
-  /* Foco del campo */
-  .form-group input:focus {
-    outline: none;
-    border-color: #2563eb;
-  }
-
-  /* Botón calcular */
-  .calculate-button {
-    border: none;
-    border-radius: 10px;
-    padding: 14px 25px;
-    background-color: #2563eb;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .calculate-button:hover {
-    background-color: #1d4ed8;
-  }
-
-  /* Mensajes de validación */
-  .error-message {
-    margin-top: 6px;
-    color: #dc2626;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-
-  /* Tarjeta de resultados */
-  .result-card {
-    margin-top: 30*x;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f8fafc;
-    border: 1px solid #cbd5e1;
-  }
-
-  /* Estado aprobado */
-  .approved {
-    color: #16a34a;
-    font-weight: 700;
-  }
-
-  /* Estado reprobado */
-  .failed {
-    color: #dc2626;
-    font-weight: 700;
-  }
-
-  /* Formulario de registro */
-  .register-form {
-    max-width: 500px;
-  }
-
-  /* Botón enviar */
-  .register-button {
-    border: none;
-    border-radius: 10px;
-    padding: 14px 25px;
-    background-color: #16a34a;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .register-button:hover {
-    background-color: #15803d;
+  .content section {
+    padding: 25px;
   }
 
 }
