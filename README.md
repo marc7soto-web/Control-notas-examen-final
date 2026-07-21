@@ -53,6 +53,9 @@ La aplicación permite:
 - CSS3
 - Vite
 
+## Enlace Netlyfy 
+https://control-notas-examen-final.netlify.app
+
 ## Instalación
 
 Clonar repositorio:
